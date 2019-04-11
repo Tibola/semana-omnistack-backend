@@ -32,4 +32,4 @@ app.use(express.urlencoded({ extended: true }))
 app.use(require('./routes'))
 app.use('/files', express.static(path.resolve(__dirname, '..', 'tmp')))
 
-server.listen(PORT)
+server.listen(process.env.PORT || PORT)
